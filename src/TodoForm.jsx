@@ -35,12 +35,12 @@ export default function TodoForm({addTodo }) {
     }
 
     return (
-        <ListItem style={{ display: "flex", gap: "5px" }}>
-            <form onSubmit = {handleSubmit}>
+        <ListItem>
+            <form onSubmit = {handleSubmit} style={{ display: "flex", gap: "5px" }}>
                 <TextField id="outlined-basic" label="Title" variant="outlined" onChange={handleChangeTitle} value={title} />
                 <TextField id="outlined-basic" label="Description" variant="outlined" onChange={handleChangeDescription} value={description} />
                  <LocalizationProvider dateAdapter={AdapterDayjs} >
-                    <DatePicker label="Basic date picker" value={date} onChange={handleChangeDate} />
+                    <DatePicker label="Date" value={date} onChange={handleChangeDate} />
                 </LocalizationProvider>
                 <button variant="outlined" style={{ fontSize: "15px", padding: "14px" }}>Add Todo</button>
             </form>
